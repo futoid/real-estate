@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import styles from "./App.module.css";
+import Cards from "./components/cards/cards";
+import Header from "./components/header/header";
+import SearchSection from "./components/searchSection/searchSection";
+import posts from "./data/posts";
 
-function App() {
+const App = () => {
+  const [place, setPlace] = useState("All");
+  const [type, setType] = useState("All");
+  const [data, setData] = useState(posts);
+  const changePlace = (value) => {
+    setPlace(value);
+  };
+  const changeType = (value) => {
+    setType(value);
+  };
+  const filterSubmitClicked = () => {
+    console.log("hi");
+    const placeData = posts.filter((element) => {
+      if (place === "All") {
+        return 1;
+      } else {
+        return place === element.city;
+      }
+    });
+
+    const typeData = placeData.filter((element) => {
+      if (type === "All") {
+        return 1;
+      } else {
+        return type === element.type;
+      }
+    });
+
+    setData(typeData);
+    return <>hi</>;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <main>
+        <Header />
+      </main>
+
+      <main className={styles.section}>
+        <div className={styles.text}>Find Best Properties to rent</div>
+        <SearchSection
+          type={changeType}
+          place={changePlace}
+          filterData={filterSubmitClicked}
+        />
+        <Cards result={data} type={type} place={place} />
+      </main>
+    </>
   );
-}
+};
 
 export default App;

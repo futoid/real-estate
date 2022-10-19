@@ -1,0 +1,82 @@
+.wrapper {
+  @apply mb-6 mt-10 bg-white shadow-xl hover:shadow-md cursor-pointer w-[200] rounded-3xl flex flex-col items-center justify-center;
+}
+
+.wrapperAnime {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+.header {
+  @apply relative mt-4 mx-2;
+}
+
+.imageWrapper {
+  @apply h-60 rounded-2xl overflow-hidden;
+}
+
+.image {
+  @apply object-cover w-full h-full;
+}
+
+.textWrapper {
+  @apply pt-10 pb-4 w-full px-4 flex;
+}
+
+.detailsWrapper {
+  @apply pt-1 pb-6 ml-4 w-full px-4;
+}
+
+.moreDetailsWrapper {
+  @apply pt-1 pb-6 ml-4 w-full px-4 flex;
+}
+
+.text {
+  @apply font-extrabold text-3xl leading-none tracking-wider text-black;
+}
+
+.rsText {
+  @apply font-normal pt-2 leading-none text-lg  tracking-wider text-black;
+}
+
+.priceText {
+  @apply font-bold leading-none ml-4 text-3xl  tracking-wider text-purple-700;
+}
+
+.titleText {
+  @apply font-bold leading-none text-2xl  tracking-normal text-black;
+}
+
+.descriptionText {
+  @apply font-semibold leading-none pt-2 text-sm tracking-normal text-gray-500;
+}
+
+.cityText {
+  @apply font-bold leading-none pt-2 ml-2 text-sm tracking-normal text-gray-500;
+}
+
+.moreDetailsText {
+  @apply font-semibold leading-none p-2 text-sm tracking-normal text-gray-500;
+}
+
+.badgeWrapper {
+  @apply absolute bottom-0 left-0 -mb-4 ml-3 flex flex-row;
+}
+.typeWrapper {
+  @apply absolute bottom-0 left-0 -mb-4 ml-24 flex flex-row;
+}
+
+.primaryBadge {
+  @apply h-10 w-24 ml-1 hover:bg-none flex items-center justify-center font-medium text-white  bg-purple-600 rounded-2xl shadow-xl;
+}
+
+.typeBadge {
+  @apply h-5 w-fit p-2 mt-1 ml-2 hover:bg-none flex items-center justify-center font-medium text-white  bg-red-300 rounded-2xl shadow-xl;
+}
+
+.moreDetailsBadge {
+  @apply h-10 w-24 ml-1 bg-gray-100 flex items-center justify-center font-medium text-purple-400 rounded-2xl shadow-md mr-2;
+}
+
+.badgeAnime {
+  @apply transform-gpu translate-y-0 hover:-translate-y-1 transition-all duration-300 ease-in-out;
+}
