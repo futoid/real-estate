@@ -6,14 +6,13 @@ import SearchSection from "./components/searchSection/searchSection";
 import posts from "./data/posts";
 
 const App = () => {
-
   //varialbles to handle the fitler data
   const [place, setPlace] = useState("All");
   const [type, setType] = useState("All");
   const [data, setData] = useState(posts);
   const [minValue, setMinValue] = useState(500);
   const [maxValue, setMaxValue] = useState(10000);
-  
+
   //functions handling changes on the data of the filter  [all functions]
   const changePlace = (value) => {
     setPlace(value);
@@ -50,9 +49,9 @@ const App = () => {
       }
     });
 
-      //filtering data acc. to PRICE (maximum and minimum value of price)
+    //filtering data acc. to PRICE (maximum and minimum value of price)
     const valueData = typeData.filter((element) => {
-      if (minValue ==="All" && maxValue === "All") return 1;
+      if (minValue === "All" && maxValue === "All") return 1;
       else if (minValue === "All") return Number(element.price) <= maxValue;
       else if (maxValue === "All") return Number(element.price) >= minValue;
       else
@@ -61,7 +60,6 @@ const App = () => {
         );
     });
 
-
     //after all filtering updating the new data
     setData(valueData);
   };
@@ -69,18 +67,16 @@ const App = () => {
   return (
     <>
       <main>
-
-      {/* Header Component */}
+        {/* Header Component */}
         <Header />
       </main>
 
       {/* This part contains Search Section and Cards components*/}
       <main className={styles.section}>
-
-      {/* Text on top */}
+        {/* Text on top */}
         <div className={styles.text}>Find Best Properties to rent</div>
-        
-      {/* Search Section passing [all function] to handle changes in data inside Search section*/}  
+
+        {/* Search Section passing [all function] to handle changes in data inside Search section*/}
         <SearchSection
           type={changeType}
           place={changePlace}

@@ -7,6 +7,8 @@ export default function Cards(props) {
   //This component is taking single CARD and showing all data
   //data is provided by App.js
   //data is filtered acc. to the parameters of user
+
+
   return (
     <div>
       <section className={styles.container}>
