@@ -1,8 +1,1 @@
 
-.section {
-    @apply bg-gray-100 h-full md:h-full w-full lg:pt-20 lg:pr-28 lg:pl-28 p-10;
-  }
-  
-  .text {
-    @apply font-bold text-3xl lg:text-5xl tracking-tight leading-none text-black mb-5  ;
-  }

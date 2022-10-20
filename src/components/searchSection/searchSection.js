@@ -39,15 +39,15 @@ export default function SearchSection(props) {
   };
 
   return (
-    <div className="w-full bg-gray-300 p-3 rounded-lg md:flex">
-      <div className="lg:flex lg:ml-5">
+    <div className="w-full p-3 rounded-lg md:flex border-purple-700/5 shadow-lg border-2">
+      <div className="lg:ml-5">
         {/* Price Text */}
-        <h1 className="font-bold text-black text-2xl m-1">Place</h1>
+        <h1 className="font-medium text-purple-500 text-sm m-1">Place</h1>
 
         {/* DropDown for Places */}
         <select
           onChange={handlePlace}
-          className="text-xl p-1 rounded-lg bg-purple-50"
+          className="text-xl p-1 rounded-md bg-white border-2  border-gray-300 font-mono w-full"
         >
           <option>All</option>
           <option>Delhi, INDIA</option>
@@ -56,14 +56,14 @@ export default function SearchSection(props) {
         </select>
       </div>
 
-      <div className="lg:flex lg:ml-16">
+      <div className="lg:ml-16">
         {/* Price Text */}
-        <h1 className="font-bold text-black text-2xl m-1">Type</h1>
+        <h1 className="font-medium text-purple-500 text-sm m-1">Type</h1>
 
         {/* DropDown for Type */}
         <select
           onChange={handleType}
-          className="text-xl p-1 rounded-lg bg-purple-50"
+          className="text-xl p-1 rounded-md bg-white border-2  border-gray-300 font-mono w-full"
         >
           <option>All</option>
           <option>house</option>
@@ -72,34 +72,31 @@ export default function SearchSection(props) {
         </select>
       </div>
 
-        {/* DropDown for Price */}
-      <div className="lg:flex lg:ml-16">
-        {/* Price Text */}
-        <h1 className="font-bold text-black text-2xl lg:mt-1">Price</h1>
-        
-        {/* Minimum Price */}
-        <div className="flex mt-1">
-        <h1 className="text-sm ml-4 mt-2 mr-2">from</h1>
+      <div className="lg:ml-16">
+        {/* Price Filter Section*/}
+        <h1 className="font-medium text-purple-500 text-sm m-1">Minimum Price</h1>
+
+        {/* Minimum Value*/}
         <select
-              onChange={handleMin}
-              className="text-xl p-1 rounded-lg bg-purple-50"
-            >
-              <option>All</option>
+          onChange={handleMin}
+          className="text-xl p-1 rounded-md bg-white border-2  border-gray-300 font-mono w-full"
+        >
+              <option>Min</option>
               <option>500</option>
               <option>1000</option>
               <option>1500</option>
               <option>2000</option>
-            </select>
-        </div>
+        </select>
+      </div>
 
-        {/* Maximum Price */}
-        <div className="flex mt-1">
-        <h1 className="text-sm ml-4 mt-2 mr-2">to</h1>
+      <div className="lg:ml-16">
+        <h1 className="font-medium text-purple-500 text-sm m-1">Maximum Price</h1>
+        {/* Maximum Value*/}
         <select
-              onChange={handleMax}
-              className="text-xl p-1 rounded-lg bg-purple-50"
-            >
-              <option>All</option>
+          onChange={handleMax}
+          className="text-xl p-1 rounded-md bg-white border-2  border-gray-300 font-mono w-full"
+        >
+              <option>Max</option>
               <option>1500</option>
               <option>2000</option>
               <option>2500</option>
@@ -107,16 +104,15 @@ export default function SearchSection(props) {
               <option>4000</option>
               <option>6000</option>
               <option>8000</option>
-            </select>
-        </div>
-       
+        </select>
       </div>
 
+    
       {/* Submit Button*/}
-      <div className="lg:flex lg:ml-56 ">
+      <div>
       <button
           type="button"
-          class="inline-block px-6 py-2.5 bg-purple-600 text-white font-medium text-lg leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out "
+          class="inline-block lg:ml-60 mt-2 px-8 py-3 bg-purple-600 text-white font-medium text-xl leading-tight uppercase rounded shadow-md hover:bg-purple-700 hover:shadow-lg focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg transition duration-150 ease-in-out"
           onClick={handleSubmit}
         >
           Filter
